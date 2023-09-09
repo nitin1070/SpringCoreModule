@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!-- Inject values as a p:schema -->
+	
+	<bean id="PersonAddBean3" class="com.si.PersonAddress" p:add="Shekpura" p:HN="30"/>
+	
+	
+
+	<bean name="PersonBean3" class="com.si.Person" p:name="Nikita" p:age="23" p:add-ref="PersonAddBean3">
+	
+	<property name="hobbies">
+	<list>
+	<value>Learning</value>
+	<value>Swimming</value>
+	<value>Hocky</value>	
+	</list>
+
+	</property>
+	<property name="prop">
+	<props>
+	
+<prop key="nickName">Nikki</prop>
+<prop key="Lover">Nitin</prop>
+
+	</props>
+	
+	</property>
+	
+	
+	
+	</bean>
+
+</beans>  

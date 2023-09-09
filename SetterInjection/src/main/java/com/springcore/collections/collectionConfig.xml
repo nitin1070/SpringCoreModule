@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+	<bean id="EmpBean" class="com.springcore.collections.Employee">
+
+		<property name="name" value="Nitin Meena" />
+
+		<property name="phones">
+
+			<list>
+				<value>9174919987</value>
+				<value>9669660491</value>
+				<value>9009846471</value>
+				<null />
+			</list>
+
+
+		</property>
+		<property name="addresses">
+			<set>
+
+				<value>Bhopal</value>
+				<value>Mumbai</value>
+				<value>Delhi</value>
+
+
+			</set>
+		</property>
+		<property name="courses">
+
+			<map>
+				<entry key="java" value="3months" />
+				<entry key="python" value="6months" />
+				<entry key="c++" value="12months" />
+
+
+
+
+			</map>
+
+
+
+
+		</property>
+
+	</bean>
+
+
+
+
+</beans>  

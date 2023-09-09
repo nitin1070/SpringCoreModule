@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+
+	<!-- Inject values using value as a Element -->
+
+	<bean id="personAdd" class="com.si.PersonAddress">
+		<property name="add">
+		
+		
+		<value>parwaliya Sadak Bhopa</value>
+		
+		</property>
+		
+		<property name="HN">
+		
+		
+		<value>171</value>
+		</property>
+	</bean>
+	
+	<bean id="PersonBean" class="com.si.Person">
+	
+	
+		<property name="name">
+		<value>Nitin</value>
+		</property>
+		
+		
+		<property name="age">
+		<value>22</value>
+		
+		</property>
+
+		<property name="hobbies">
+			<list>
+				<value>Cricket</value>
+				<value>FootBall</value>
+				<value>Kabbaddi</value>
+
+			</list>
+
+		</property>
+
+		<property name="prop">
+			<props>
+			<prop key="prop1">prop value 1</prop>
+			<prop key="prop2">prop value 2</prop>
+			</props>
+		</property>
+		
+		<property name="add">
+			<ref bean="personAdd" />
+		</property>
+
+	</bean>
+
+</beans>  

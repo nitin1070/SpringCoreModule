@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans  
+	           http://www.springframework.org/schema/beans/spring-beans.xsd
+	           http://www.springframework.org/schema/context/spring-context.xsd
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+         
+      
+    <!--   INJECT OBJECT OF Address class using Autowire  -->
+    
+    <!-- <bean id="add" class="com.springcore.autowire.Address" p:state="MP" p:city="Bhopal"/> -->
+    
+    <bean id="add2" class="com.springcore.autowire.Address" p:state="Gujrat" p:city="Ahemdabad"/>
+    
+   <!--  inject using byName autowire  -->
+    
+    <bean id="emp" class="com.springcore.autowire.Emp" autowire="byName"/>
+    
+  <!--   inject object ref using byType autowire -->
+    
+    <bean id="emp2" class="com.springcore.autowire.Emp" autowire="byType"/>
+    
+
+   <!-- inject object ref using constructor autowire  -->
+  
+  <bean id="emp3" class="com.springcore.autowire.Emp" autowire="constructor"/>
+  
+  
+  
+</beans>  
